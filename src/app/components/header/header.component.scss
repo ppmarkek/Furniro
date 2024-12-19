@@ -1,0 +1,39 @@
+:host {
+  padding: 30px 55px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-logo {
+  display: flex;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+.header-navigate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-navigate__ul {
+  display: flex;
+  gap: 75px;
+  list-style: none;
+}
+
+.header-navigate__link {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-profileNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+  list-style: none;
+}

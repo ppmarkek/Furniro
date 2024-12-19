@@ -1,0 +1,37 @@
+<a [routerLink]="'/'" class="header-logo">
+  <img src="favicon.svg" alt="icon" />
+  <h3 class="h3">Furniro</h3>
+</a>
+
+<nav class="header-navigate">
+  <ul class="header-navigate__ul">
+    <li *ngFor="let itemNav of routerLinks">
+      <a class="header-navigate__link" [routerLink]="itemNav.link">
+        {{ itemNav.label }}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<ul class="header-profileNav">
+  <li>
+    <a [routerLink]="'/profile'">
+      <img src="/assets/svg/invalidProfile.svg" alt="profile" />
+    </a>
+  </li>
+  <li>
+    <a>
+      <img src="/assets/svg/search.svg" alt="search" />
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="'/favorite'">
+      <img src="/assets/svg/favorite.svg" alt="favorite" />
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="'/cart'">
+      <img src="/assets/svg/cart.svg" alt="cart" />
+    </a>
+  </li>
+</ul>
