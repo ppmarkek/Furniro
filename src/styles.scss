@@ -7,11 +7,74 @@
 }
 
 :root {
-  --dark-color: "#000";
-  --light-color: "#fff";
+  --dark-color: #000;
+  --light-dark-color: #333333;
+  --light-color: #fff;
+  --primary-color: #b88e2f;
+  --silver-color: #666666;
+  --light-silver-color: #B0B0B0;
+  --red-color: #E97171
+}
+
+.h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+.h2 {
+  font-size: 34px;
+  font-weight: 700;
 }
 
 .h3 {
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
+}
+
+.h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.regular {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.button {
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--light-color);
+    color: var(--primary-color);
+  }
+}
+
+.button-white {
+  border: 1px solid var(--primary-color);
+  background: var(--light-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+  }
 }

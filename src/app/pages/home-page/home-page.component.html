@@ -1,0 +1,56 @@
+<div class="home-new-collection">
+  <div class="home-new-collection__box">
+    <div class="home-new-collection__box_text">
+      <p class="regular" [style.color]="'var(--light-dark-color)'">
+        New Arrival
+      </p>
+      <h1 class="h1" [style.color]="'var(--primary-color)'">
+        Discover Our <br />
+        New Collection
+      </h1>
+      <p class="regular" [style.color]="'var(--light-dark-color)'">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+        luctus nec ullamcorper mattis.
+      </p>
+    </div>
+    <button class="button" style="width: 220px; height: 75px">BUY NOW</button>
+  </div>
+</div>
+
+<div class="home-the-range">
+  <div class="home-the-range_title">
+    <h2 class="h2" [style.color]="'var(--light-dark-color)'">
+      Browse The Range
+    </h2>
+    <p class="regular" [style.color]="'var(--silver-color)'">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
+
+  <div class="home-the-range_card">
+    <a [routerLink]="'/shop/dining'" class="range-card">
+      <img src="/assets/images/dining.png" alt="dining" />
+      <h4 class="h4">Dining</h4>
+    </a>
+    <a [routerLink]="'/shop/living'" class="range-card">
+      <img src="/assets/images/living.png" alt="living" />
+      <h4 class="h4">Living</h4>
+    </a>
+    <a [routerLink]="'/shop/bedroom'" class="range-card">
+      <img src="/assets/images/bedroom.png" alt="bedroom" />
+      <h4 class="h4">Bedroom</h4>
+    </a>
+  </div>
+
+  <div class="home-products">
+    <h2 class="h2" [style.color]="'var(--light-dark-color)'">Our Products</h2>
+    <div class="home-products__cards">
+      @for (product of products; track product._id) {
+      <app-product-card [product]="product"></app-product-card>
+      }
+    </div>
+    <button style="width: 245px; height: 50px" class="button-white">
+      Show More
+    </button>
+  </div>
+</div>

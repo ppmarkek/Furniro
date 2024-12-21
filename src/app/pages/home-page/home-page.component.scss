@@ -1,0 +1,70 @@
+.home-new-collection {
+  background: url("/assets/images/scandinavian-interior-background.png") center;
+  height: 715px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 55px;
+}
+
+.home-new-collection__box {
+  background: #fff3e3;
+  border-radius: 10px;
+  padding: 40px;
+  padding-top: 60px;
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.home-new-collection__box_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home-the-range {
+  padding: 55px 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.home-the-range_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-the-range_card {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.range-card {
+  text-decoration: none;
+  color: var(--light-dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-products {
+  padding: 55px 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-products__cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

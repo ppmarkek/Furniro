@@ -1,0 +1,66 @@
+[
+  {
+    "_id": "1",
+    "title": "Syltherine",
+    "label": "Stylish cafe chair",
+    "imgs": ["assets/images/Syltherine.png"],
+    "price": 2500,
+    "discound": 30
+  },
+  {
+    "_id": "2",
+    "title": "Leviosa",
+    "label": "Stylish cafe chair",
+    "imgs": ["assets/images/Leviosa.png"],
+    "price": 2500,
+    "discound": 0
+  },
+  {
+    "_id": "3",
+    "title": "Lolito",
+    "label": "Luxury big sofa",
+    "imgs": ["assets/images/Lolito.png"],
+    "price": 7000,
+    "discound": 50
+  },
+  {
+    "_id": "4",
+    "title": "Respira",
+    "label": "Outdoor bar table and stool",
+    "imgs": ["assets/images/Respira.png"],
+    "price": 500,
+    "discound": 0
+  },
+  {
+    "_id": "5",
+    "title": "Grifo",
+    "label": "Night lamp",
+    "imgs": ["assets/images/Grifo.png"],
+    "price": 1500,
+    "discound": 0
+  },
+  {
+    "_id": "6",
+    "title": "Muggo",
+    "label": "Small mug",
+    "imgs": ["assets/images/Muggo.png"],
+    "price": 150,
+    "discound": 0
+  },
+  {
+    "_id": "7",
+    "title": "Pingky",
+    "label": "Cute bed set",
+    "imgs": ["assets/images/Pingky.png"],
+    "price": 7000,
+    "discound": 50
+  },
+  {
+    "_id": "8",
+    "title": "Potty",
+    "label": "Minimalist flower pot",
+    "imgs": ["assets/images/Potty.png"],
+    "price": 500,
+    "discound": 0
+  }
+]

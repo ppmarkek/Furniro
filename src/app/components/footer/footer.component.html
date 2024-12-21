@@ -1,0 +1,38 @@
+<div class="footer-info">
+  <div class="footer-info-links">
+    <h2 class="footer-info__text">Funiro.</h2>
+    <p>
+      400 University Drive Suite 200 Coral<br />
+      Gables,<br />
+      FL 33134 USA
+    </p>
+  </div>
+
+  <div class="footer-info-links">
+    <p>Links</p>
+    @for (item of arrayLinks; track $index) {
+    <a [routerLink]="item.link">{{ item.label }}</a>
+    }
+  </div>
+
+  <div class="footer-info-links">
+    <p>Help</p>
+    @for (item of arrayHelp; track $index) {
+    <a [routerLink]="item.link">{{ item.label }}</a>
+    }
+  </div>
+
+  <div class="footer-info-links">
+    <p>Newsletter</p>
+    <div class="footer-newsletter">
+      <input
+        type="text"
+        class="footer-input"
+        placeholder="Enter Your Email Address"
+      />
+      <button class="footer-btn">SUBSCRIBE</button>
+    </div>
+  </div>
+</div>
+
+<p class="license">2023 furino. All rights reverved</p>

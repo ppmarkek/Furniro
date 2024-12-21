@@ -1,0 +1,52 @@
+<ng-container *ngIf="product as productData">
+  <img class="card-img" [src]="getProductImage(productData)" alt="image" />
+
+  <div class="card-info">
+    <h4 class="h4" [style.color]="'var(--light-dark-color)'">
+      {{ productData?.title || "No Title" }}
+    </h4>
+    <p class="regular" [style.color]="'var(--silver-color)'">
+      {{ productData?.label || "No Label" }}
+    </p>
+    @if(productData.discound) {
+    <div class="price">
+      <p class="card-info_price">
+        {{
+          calculateDiscount(
+            productData.price?.valueOf(),
+            productData?.discound?.valueOf()
+          ).finalPrice || "N/A"
+        }}
+        €
+      </p>
+      <p class="card-info_discound">
+        {{ productData?.price || "N/A" }} €
+      </p>
+    </div>
+    } @else {
+    <p class="card-info_price">
+      {{ productData?.price || "N/A" }} €
+    </p>
+    }
+  </div>
+
+  <a class="card-hover">
+    <button style="width: 200px; height: 50px" class="button-white">
+      Add to cart
+    </button>
+
+    <div class="card-hover__links">
+      <a><img src="assets/svg/share.svg" />Share</a>
+      <a [routerLink]="'/compare'">
+        <img src="assets/svg/compare.svg" />
+        Compare
+      </a>
+      <a><img src="assets/svg/like.svg" />Like</a>
+    </div>
+  </a>
+
+  <div class="card-discound" *ngIf="productData.discound">
+    -{{ productData.discound }}%
+  </div>
+</ng-container>
+<ng-container *ngIf="!product"> No product </ng-container>
