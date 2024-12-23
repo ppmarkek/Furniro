@@ -1,0 +1,60 @@
+<div class="login">
+  <h2 class="h2">Log in</h2>
+  <p>
+    If you don't have an account you can
+    <a class="registr-link" [routerLink]="'/signup'">sign up</a>!
+  </p>
+  <form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p class="error-text" *ngIf="error()">Email or password is incorrect</p>
+    <div class="input-div full-width">
+      <div class="input-label">Email</div>
+      <input class="input" formControlName="email" />
+      <p
+        class="error-text"
+        *ngIf="email?.errors?.['required'] && email?.touched"
+      >
+        Email is required.
+      </p>
+      <p class="error-text" *ngIf="email?.errors?.['email'] && email?.touched">
+        Invalid email format.
+      </p>
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Password</div>
+      <input class="input" type="password" formControlName="password" />
+      <p
+        class="error-text"
+        *ngIf="password?.errors?.['required'] && password?.touched"
+      >
+        Password is required.
+      </p>
+    </div>
+
+    <button class="form-button full-width">Submit</button>
+  </form>
+</div>
+
+<!-- <form class="login-form">
+    <div class="input-div">
+      <div class="input-label">First name</div>
+      <input class="input" />
+    </div>
+    <div class="input-div">
+      <div class="input-label">Last name</div>
+      <input class="input" />
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Email</div>
+      <input class="input" />
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Password</div>
+      <input class="input" type="password" />
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Repeat password</div>
+      <input class="input" type="password" />
+    </div>
+
+    <button class="form-button full-width">Submit</button>
+  </form> -->

@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.login {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  padding-top: 30px;
+  display: grid;
+  grid-gap: 10px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form-button {
+  margin-top: 30px;
+}
