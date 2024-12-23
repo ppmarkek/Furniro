@@ -41,16 +41,25 @@
       <h4 class="h4">Bedroom</h4>
     </a>
   </div>
+</div>
 
-  <div class="home-products">
-    <h2 class="h2" [style.color]="'var(--light-dark-color)'">Our Products</h2>
-    <div class="home-products__cards">
-      @for (product of products; track product._id) {
-      <app-product-card [product]="product"></app-product-card>
-      }
-    </div>
-    <button style="width: 245px; height: 50px" class="button-white">
-      Show More
-    </button>
+<div class="home-products">
+  <h2 class="h2" [style.color]="'var(--light-dark-color)'">Our Products</h2>
+  <div class="home-products__cards">
+    @for (product of products; track product._id) {
+    <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+  <button style="width: 245px; height: 50px" class="button-white">
+    Show More
+  </button>
+</div>
+
+<div class="funiro-furniture">
+  <p class="regular" [style.color]="'var(--silver-color)'">
+    Share your setup with
+  </p>
+  <h2 class="h2" [style.color]="'var(--light-dark-color)'">#FuniroFurniture</h2>
+  <div class="funiro-furniture__image">
   </div>
 </div>

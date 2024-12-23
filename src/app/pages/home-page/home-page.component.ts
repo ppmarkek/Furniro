@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
-import productsJSON from '../../data/productsData/products.json';
+import productsJSON from '../../data/jsons/products.json';
 import { ProductInterface } from '../../data/interfaces/productInterface';
 
 @Component({
