@@ -22,6 +22,21 @@ export class AuthService {
       .pipe(tap((value: TokenResponse) => this.saveTokens(value)));
   }
 
+  singup(payload: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+  }) {
+    return this.http.post(`${this.baseApiUrl}/user/create`, payload);
+  }
+
+  logout() {
+    this.cookieService.deleteAll();
+    this.token = null;
+    this.refreshToken = null;
+  }
+
   saveTokens(res: TokenResponse) {
     this.token = res.accessToken;
     this.refreshToken = res.refreshToken;

@@ -1,1 +1,92 @@
-<p>signup-page works!</p>
+<div class="signup">
+  <h2 class="h2">Sign up</h2>
+  <p>
+    If you have an account you can
+    <a class="registr-link" [routerLink]="'/login'">log in</a>!
+  </p>
+  <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <p class="success-text full-width" *ngIf="success()">{{ success() }}</p>
+    <p class="error-text full-width" *ngIf="error()">{{ error() }}</p>
+    <div class="input-div">
+      <div class="input-label">First name</div>
+      <input
+        class="input"
+        formControlName="firstName"
+        placeholder="Enter your first name"
+      />
+      <div *ngIf="firstName?.touched && firstName?.invalid">
+        <p class="error-text" *ngIf="firstName?.errors?.['required']">
+          First name is required.
+        </p>
+      </div>
+    </div>
+    <div class="input-div">
+      <div class="input-label">Last name</div>
+      <input
+        class="input"
+        formControlName="lastName"
+        placeholder="Enter your last name"
+      />
+      <div *ngIf="lastName?.touched && lastName?.invalid">
+        <p class="error-text" *ngIf="lastName?.errors?.['required']">
+          Last name is required.
+        </p>
+      </div>
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Email</div>
+      <input
+        class="input"
+        formControlName="email"
+        type="email"
+        placeholder="Enter your email"
+      />
+      <div *ngIf="email?.touched && email?.invalid">
+        <p class="error-text" *ngIf="email?.errors?.['required']">
+          Email is required.
+        </p>
+        <p class="error-text" *ngIf="email?.errors?.['email']">
+          Invalid email format.
+        </p>
+      </div>
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Password</div>
+      <input
+        class="input"
+        formControlName="password"
+        type="password"
+        placeholder="Enter your password"
+      />
+      <div *ngIf="password?.touched && password?.invalid">
+        <p class="error-text" *ngIf="password?.errors?.['required']">
+          Password is required.
+        </p>
+        <p class="error-text" *ngIf="password?.errors?.['minlength']">
+          Password must be at least 6 characters.
+        </p>
+      </div>
+    </div>
+    <div class="input-div full-width">
+      <div class="input-label">Repeat password</div>
+      <input
+        class="input"
+        formControlName="repeatPassword"
+        type="password"
+        placeholder="Repeat your password"
+      />
+      <div
+        *ngIf="repeatPassword?.touched && (repeatPassword?.invalid || signupForm?.errors?.['passwordMismatch'])"
+      >
+        <p class="error-text" *ngIf="repeatPassword?.errors?.['required']">
+          Repeat password is required.
+        </p>
+        <p class="error-text" *ngIf="signupForm?.errors?.['passwordMismatch']">
+          Passwords do not match!
+        </p>
+      </div>
+    </div>
+
+    <button class="form-button full-width">Submit</button>
+  </form>
+</div>
